@@ -1,9 +1,11 @@
-﻿param( 	
+param( 	
+  [ValidateRange(0,10)]
+  [int32]$CreatedDaysBack,
   [Parameter(Mandatory=$true)]
-  [string]$csv
 )
 
 $euFilter = '^Albania$|^Andorra$|^Austria$|^Belarus$|^Belgium$|^Bosnia\sand\sHerzegovina$|^Bulgaria$|^Croatia$|^Cyprus$|^Czech\sRepublic$|^Denmark$|^Estonia$|^Finland$|^France$|^Georgia$|^Germany$|^Greece$|^Hungary$|^Iceland$|^Republic\sof\sIreland$|^Italy$|^Latvia$|^Liechtenstein$|^Lithuania$|^Luxembourg$|^Republic\sof\sMacedonia$|^Malta$|^Moldova$|^Monaco$|^Montenegro$|^Netherlands$|^Norway$|^Poland$|^Portugal$|^Romania$|^Russia$|^San\sMarino$|^Serbia$|^Slovakia$|^Slovenia$|^Spain$|^Sweden$|^Switzerland$|^Turkey$|^Ukraine$|^United\sKingdom$|^Vatican$|^AL$|^AD$|^AT$|^BY$|^BE$|^BA$|^BG$|^HR$|^CY$|^CZ$|^DK$|^EE$|^FI$|^FR$|^GE$|^DE$|^GR$|^HU$|^IS$|^IE$|^IT$|^LV$|^LI$|^LT$|^LU$|^MK$|^MT$|^MD$|^MC$|^ME$|^NL$|^NO$|^PL$|^PT$|^RO$|^RU$|^SM$|^RS$|^SK$|^SI$|^ES$|^SE$|^CH$|^TR$|^UA$|^GB$|^VA$|^Ireland$|^Macedonia$|^Bosnia$|^Deutschland$'
+$csv = $env:USERPROFILE + "\Desktop\EUMailboxes.csv"
 $activity = "Processing Request..."
 $status = "Getting All User Mailboxes" 
 
